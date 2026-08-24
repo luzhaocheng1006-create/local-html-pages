@@ -1,0 +1,126 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>星河 Rafasoda KD软包带背 新品广告分析</title><style>:root {
+  --navy: #102a43;
+  --blue: #1769e0;
+  --cyan: #2f9cf4;
+  --ink: #243b53;
+  --muted: #627d98;
+  --line: #d9e2ec;
+  --bg: #f3f7fb;
+  --good: #14866d;
+  --warn: #b7791f;
+  --bad: #c53f3f;
+  --shadow: 0 14px 34px rgba(16, 42, 67, .10);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+a { color: #1557a8; }
+.page { width: min(1180px, calc(100% - 32px)); margin: 28px auto 48px; }
+.hero { position: relative; overflow: hidden; padding: 38px; border-radius: 24px; color: #fff; background: linear-gradient(135deg, var(--navy), var(--blue) 68%, var(--cyan)); box-shadow: var(--shadow); }
+.hero::after { content: ""; position: absolute; right: -80px; top: -110px; width: 330px; height: 330px; border-radius: 50%; background: rgba(255,255,255,.10); }
+.hero h1 { position: relative; margin: 8px 0 10px; font-size: clamp(30px, 5vw, 52px); line-height: 1.15; }
+.hero p { position: relative; max-width: 900px; margin: 0; color: #e9f5ff; }
+.hero a { color: inherit; }
+.eyebrow { font-size: 12px; font-weight: 900; letter-spacing: .14em; opacity: .85; }
+.back { position: relative; display: inline-block; margin: 0 14px 10px 0; color: #e7f3ff; text-decoration: none; font-weight: 800; }
+.hero-meta { position: relative; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.pill { display: inline-flex; padding: 7px 12px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(255,255,255,.14); font-size: 13px; font-weight: 800; }
+.kpis { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin: 24px 0; }
+.kpi { min-width: 0; padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: #fff; box-shadow: 0 8px 22px rgba(16,42,67,.05); }
+.kpi small, .kpi .label { display: block; color: var(--muted); font-size: 12px; font-weight: 800; }
+.kpi b, .kpi .value { display: block; margin-top: 4px; color: var(--navy); font-size: 25px; font-weight: 900; }
+.kpi .note { color: var(--muted); font-size: 12px; }
+.detail-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.kpi-body { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 8px; }
+.kpi-main { min-width: 0; }
+.kpi-main b { margin: 0; white-space: nowrap; }
+.kpi-prev { margin-top: 10px; font-size: 12px; font-weight: 900; }
+.delta { flex: 0 0 72px; width: 72px; height: 72px; display: grid; place-items: center; border: 3px solid #9db8d3; border-radius: 50%; background: #f7fbff; font-size: 12px; font-weight: 900; }
+.trend-up { color: #b3201d; }
+.trend-down { color: #087551; }
+.trend-flat { color: #4e6f91; }
+.delta.trend-up { border-color: #ef625d; background: #fff2f0; }
+.delta.trend-down { border-color: #22a574; background: #eefaf5; }
+.delta.trend-flat { border-color: #9db8d3; background: #f7fbff; }
+.kpi .note { display: block; margin-top: 8px; }
+.section-title { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin: 34px 0 15px; }
+.section-title small { color: var(--blue); font-weight: 900; letter-spacing: .12em; }
+.section-title h2 { margin: 1px 0; color: var(--navy); }
+.section-title p { max-width: 650px; margin: 0; color: var(--muted); }
+.parents, .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.parent, .product-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: var(--shadow); }
+.parent-top { padding: 22px; color: #fff; background: linear-gradient(135deg, #163b69, #1d74d5); }
+.rank { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; background: #fff; color: var(--blue); font-weight: 900; }
+.parent h3 { margin: 15px 0 2px; font-size: 20px; }
+.asin { font: 700 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.asin a { color: inherit; }
+.parent-body { display: flex; flex: 1; flex-direction: column; padding: 20px; }
+.meta, .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.meta div, .metric { padding: 10px; border-radius: 12px; background: #f5f8fc; }
+.meta span, .metric small { display: block; color: var(--muted); font-size: 11px; }
+.meta strong, .metric b { color: var(--navy); }
+.metrics { margin: 16px 0; }
+.metric { border: 1px solid #e7edf4; background: #fff; }
+.metric b { font-size: 18px; }
+.metric-compare, .compare-sub { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 6px; }
+.comparison-prev { font-size: 11px; font-weight: 900; }
+.comparison-delta { padding: 2px 6px; border: 1px solid currentColor; border-radius: 999px; font-size: 10px; font-weight: 900; line-height: 1.25; }
+.compare-cell > b { display: block; color: var(--navy); white-space: nowrap; }
+.verdict { margin: 0 0 14px; padding-left: 11px; border-left: 3px solid var(--blue); }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 4px 0 18px; }
+.tag { padding: 5px 9px; border-radius: 999px; background: #eaf3ff; color: #1557a8; font-size: 12px; font-weight: 800; }
+.detail { display: block; margin-top: auto; padding: 11px 15px; border-radius: 12px; background: var(--blue); color: #fff; text-align: center; text-decoration: none; font-weight: 800; }
+.section { margin-top: 20px; padding: 22px; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: var(--shadow); }
+.section h2 { margin: 0 0 14px; color: var(--navy); }
+.notice { margin: 18px 0; padding: 14px 17px; border: 1px solid #f0cd77; border-radius: 14px; background: #fff8df; color: #604812; }
+.callout { padding: 15px; border-left: 4px solid var(--blue); border-radius: 10px; background: #edf6ff; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.mini { padding: 14px; border-radius: 13px; background: #f5f8fc; }
+.mini b { display: block; color: var(--navy); }
+.product-card { padding: 18px; box-shadow: none; background: #f8fbff; }
+.product-card h3 { margin: 0 0 4px; color: var(--navy); font-size: 18px; }
+.product-card .metrics { margin: 12px 0; }
+.catalog-asins { display: flex; flex-wrap: wrap; gap: 7px; }
+.catalog-asins a { padding: 5px 8px; border-radius: 8px; background: #edf5ff; font: 700 11px ui-monospace, SFMono-Regular, Menlo, monospace; text-decoration: none; }
+.table-wrap { overflow: auto; border: 1px solid var(--line); border-radius: 14px; }
+table { width: 100%; min-width: 800px; border-collapse: collapse; }
+th { padding: 12px 14px; background: var(--navy); color: #fff; text-align: left; font-size: 12px; }
+td { padding: 13px 14px; border-bottom: 1px solid #e9eff5; vertical-align: top; }
+tbody tr:last-child td { border-bottom: 0; }
+.status { display: inline-block; padding: 4px 9px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+.green { background: #e1f7ef; color: #0e735c; }
+.amber { background: #fff1cc; color: #8b5e00; }
+.red { background: #ffe1e1; color: #a62f2f; }
+.reason { display: block; margin-top: 5px; color: var(--muted); font-size: 11px; line-height: 1.4; max-width: 190px; }
+.empty { padding: 18px; color: var(--muted); text-align: center; }
+.steps { display: grid; gap: 10px; }
+.step { display: grid; grid-template-columns: 36px 1fr; gap: 12px; padding: 13px; border-radius: 13px; background: #f6f9fc; }
+.step i { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: var(--blue); color: #fff; font-style: normal; font-weight: 900; }
+.step b { display: block; color: var(--navy); }
+.footnote { margin-top: 12px; color: var(--muted); font-size: 13px; }
+.footer { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; text-align: center; }
+
+@media (max-width: 1050px) {
+  .kpis { grid-template-columns: repeat(2, 1fr); }
+  .parents, .product-grid { grid-template-columns: 1fr; }
+  .hero { padding: 28px; }
+  .section-title { display: block; }
+  .section-title p { margin-top: 5px; }
+}
+
+@media (max-width: 560px) {
+  .page { width: min(100% - 20px, 1180px); margin-top: 10px; }
+  .kpis { grid-template-columns: 1fr; }
+  .hero { border-radius: 18px; }
+  .meta, .two { grid-template-columns: 1fr; }
+  .delta { flex-basis: 62px; width: 62px; height: 62px; font-size: 11px; }
+}
+
+@media print {
+  body { background: #fff; }
+  .page { width: 100%; margin: 0; }
+  .hero, .parent, .product-card, .section, .kpi { box-shadow: none; }
+  .detail, .back { display: none; }
+  .parents, .product-grid { grid-template-columns: 1fr; }
+}
+</style></head><body><main class="page"><header class="hero"><a class="back" href="Xinghe_B0FVFLFD9H_2026-08.html">← 返回父体分析</a><a class="back" href="index.html">← 返回总览</a><div class="eyebrow">星河 Rafasoda PRODUCT DETAIL · KD-SOFT-BACK</div><h1>KD软包带背产品广告分析</h1><p>所属父体：<a href="https://www.amazon.com/dp/B0FVFLFD9H" target="_blank" rel="noopener">B0FVFLFD9H</a> · KD软包带背 / KD软包无背｜新品 ASIN 数：5｜本月新品明细：5｜销量：1（上月 3，-66.7%）</p><div class="hero-meta"><span class="pill">本期：2026年8月1日–23日</span><span class="pill">对比：2026年7月同期1日–23日</span><span class="pill">范围：有广告花费父体内的本月新品产品</span></div></header><section class="kpis detail-kpis"><div class="kpi"><small>广告花费</small><div class="kpi-body"><div class="kpi-main"><b>$27.75</b><div class="kpi-prev trend-down">$134.88</div></div><div class="delta trend-down">-79.4%</div></div></div><div class="kpi"><small>广告销售额</small><div class="kpi-body"><div class="kpi-main"><b>$0.00</b><div class="kpi-prev trend-down">$129.98</div></div><div class="delta trend-down">-100.0%</div></div></div><div class="kpi"><small>ACoS</small><div class="kpi-body"><div class="kpi-main"><b>—</b><div class="kpi-prev trend-flat">103.8%</div></div><div class="delta trend-flat">—</div></div></div><div class="kpi"><small>ROAS</small><div class="kpi-body"><div class="kpi-main"><b>0.00</b><div class="kpi-prev trend-down">0.96</div></div><div class="delta trend-down">-100.0%</div></div></div><div class="kpi"><small>广告订单</small><div class="kpi-body"><div class="kpi-main"><b>0</b><div class="kpi-prev trend-down">1</div></div><div class="delta trend-down">-100.0%</div></div></div><div class="kpi"><small>CTR</small><div class="kpi-body"><div class="kpi-main"><b>1.1%</b><div class="kpi-prev trend-down">1.2%</div></div><div class="delta trend-down">-8.4%</div></div><span class="note">28 / 2,490</span></div><div class="kpi"><small>CVR</small><div class="kpi-body"><div class="kpi-main"><b>0.0%</b><div class="kpi-prev trend-down">0.6%</div></div><div class="delta trend-down">-100.0%</div></div><span class="note">0 / 28</span></div><div class="kpi"><small>平均 CPC</small><div class="kpi-body"><div class="kpi-main"><b>$0.99</b><div class="kpi-prev trend-up">$0.84</div></div><div class="delta trend-up">+18.3%</div></div></div></section><section class="section"><h2>一、产品执行摘要</h2><div class="callout"><strong>总体判断：</strong>花费 $27.75、广告订单 0、ACoS —，效率需要继续观察。</div><div class="two"><div class="mini"><b>销量结构</b>本月新品销量 1、销售额 $99.98、订单 1；上月分别为 3、$299.94、2。</div><div class="mini"><b>建议动作</b>保持受控预算，先优化转化与投放结构，再决定扩量。</div></div><div class="tags"><span class="tag">新品 ASIN 数 5</span><span class="tag">本月新品明细 5</span><span class="tag">广告记录明细 4/5</span><span class="tag">相关广告活动 3</span><span class="tag">广告订单 0 · 上月 1</span></div></section><section class="section"><h2>二、SKU 信息表产品 ASIN</h2><div class="catalog-asins"><a href="https://www.amazon.com/dp/B0FVFMY517" target="_blank" rel="noopener">B0FVFMY517</a><a href="https://www.amazon.com/dp/B0FVFPMFHG" target="_blank" rel="noopener">B0FVFPMFHG</a><a href="https://www.amazon.com/dp/B0FVFQNNWX" target="_blank" rel="noopener">B0FVFQNNWX</a><a href="https://www.amazon.com/dp/B0FVFR9BFT" target="_blank" rel="noopener">B0FVFR9BFT</a><a href="https://www.amazon.com/dp/B0FVFRZMDF" target="_blank" rel="noopener">B0FVFRZMDF</a></div><p class="footnote">权威产品 ASIN 集合与本月报告明细分开展示；不用于回填缺失报告 ASIN。</p></section><section class="section"><h2>三、全部广告活动表现与建议</h2><p class="footnote">活动整体指标按 2026年8月1日–23日 与 2026年7月同期1日–23日 精确活动名对比；混合活动仍展示整个 Campaign 数据，不向父体或产品分摊。</p><div class="table-wrap"><table><thead><tr><th>广告活动</th><th>类型</th><th>归属范围</th><th>当前日预算</th><th>CPC（本期 / 上期 / 变化）</th><th>活动整体花费（本期 / 上期 / 变化）</th><th>活动整体销售额（本期 / 上期 / 变化）</th><th>订单（本期 / 上期 / 变化）</th><th>ACoS（本期 / 上期 / 变化）</th><th>判断、原因与建议</th></tr></thead><tbody><tr><td><a href="Xinghe_CAMPAIGN_SP-551435154670500_2026-08.html"><b>吧椅捡漏手动</b></a><br><small>— · 点击查看活动详情</small></td><td>SP</td><td><span class="status amber">混合范围</span><small class="reason">活动整体数据；另含 16 条未归入本月新品的推广商品行，不按父体或产品拆分。</small></td><td>—</td><td><div class="compare-cell"><b>$1.04</b><div class="compare-sub"><span class="comparison-prev trend-up">$0.61</span><span class="comparison-delta trend-up">+69.1%</span></div></div></td><td><div class="compare-cell"><b>$132.03</b><div class="compare-sub"><span class="comparison-prev trend-down">$164.75</span><span class="comparison-delta trend-down">-19.9%</span></div></div></td><td><div class="compare-cell"><b>$0.00</b><div class="compare-sub"><span class="comparison-prev trend-down">$451.25</span><span class="comparison-delta trend-down">-100.0%</span></div></div></td><td><div class="compare-cell"><b>0</b><div class="compare-sub"><span class="comparison-prev trend-down">4</span><span class="comparison-delta trend-down">-100.0%</span></div></div></td><td><div class="compare-cell"><b>—</b><div class="compare-sub"><span class="comparison-prev trend-flat">36.5%</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><span class="status red">表现很差</span><small class="reason">活动整体花费 $132.03、127 次点击，仍为 0 单。 停止扩量，优先检查投放对象、搜索流量和 Listing 转化。</small></td></tr><tr><td><a href="Xinghe_CAMPAIGN_SP-209802316310438_2026-08.html"><b>SP-rbkd 无背-进攻</b></a><br><small>— · 点击查看活动详情</small></td><td>SP</td><td><span class="status amber">混合范围</span><small class="reason">活动整体数据；另含 3 条未归入本月新品的推广商品行，不按父体或产品拆分。</small></td><td>—</td><td><div class="compare-cell"><b>$0.96</b><div class="compare-sub"><span class="comparison-prev trend-up">$0.89</span><span class="comparison-delta trend-up">+8.1%</span></div></div></td><td><div class="compare-cell"><b>$10.58</b><div class="compare-sub"><span class="comparison-prev trend-down">$22.24</span><span class="comparison-delta trend-down">-52.4%</span></div></div></td><td><div class="compare-cell"><b>$0.00</b><div class="compare-sub"><span class="comparison-prev trend-flat">$0.00</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>0</b><div class="compare-sub"><span class="comparison-prev trend-flat">0</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>—</b><div class="compare-sub"><span class="comparison-prev trend-flat">—</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><span class="status amber">需要注意</span><small class="reason">活动整体花费 $10.58、11 次点击，仍为 0 单。 保持受控预算，积累更多订单证据后再调整。</small></td></tr><tr><td><a href="Xinghe_CAMPAIGN_SP-270794063235973_2026-08.html"><b>SP-rbkd 无背-自动</b></a><br><small>— · 点击查看活动详情</small></td><td>SP</td><td><span class="status amber">混合范围</span><small class="reason">活动整体数据；另含 3 条未归入本月新品的推广商品行，不按父体或产品拆分。</small></td><td>—</td><td><div class="compare-cell"><b>$0.50</b><div class="compare-sub"><span class="comparison-prev trend-down">$0.94</span><span class="comparison-delta trend-down">-46.6%</span></div></div></td><td><div class="compare-cell"><b>$0.50</b><div class="compare-sub"><span class="comparison-prev trend-down">$201.45</span><span class="comparison-delta trend-down">-99.8%</span></div></div></td><td><div class="compare-cell"><b>$0.00</b><div class="compare-sub"><span class="comparison-prev trend-down">$194.57</span><span class="comparison-delta trend-down">-100.0%</span></div></div></td><td><div class="compare-cell"><b>0</b><div class="compare-sub"><span class="comparison-prev trend-down">2</span><span class="comparison-delta trend-down">-100.0%</span></div></div></td><td><div class="compare-cell"><b>—</b><div class="compare-sub"><span class="comparison-prev trend-flat">103.5%</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><span class="status amber">需要注意</span><small class="reason">活动整体花费 $0.50、1 次点击，仍为 0 单。 保持受控预算，积累更多订单证据后再调整。</small></td></tr></tbody></table></div></section><section class="section"><h2>子 ASIN / SKU 重点</h2><div class="table-wrap"><table><thead><tr><th>子 ASIN / SKU</th><th>CPC（本期 / 上期 / 变化）</th><th>花费（本期 / 上期 / 变化）</th><th>广告销售额（本期 / 上期 / 变化）</th><th>点击（本期 / 上期 / 变化）</th><th>订单（本期 / 上期 / 变化）</th><th>ACoS（本期 / 上期 / 变化）</th><th>判断与原因</th></tr></thead><tbody><tr><td><a href="https://www.amazon.com/dp/B0FVFMY517" target="_blank" rel="noopener">B0FVFMY517</a><br><small>RBKD-30-WHITE-BE</small></td><td><div class="compare-cell"><b>$0.97</b><div class="compare-sub"><span class="comparison-prev trend-up">$0.86</span><span class="comparison-delta trend-up">+13.7%</span></div></div></td><td><div class="compare-cell"><b>$17.52</b><div class="compare-sub"><span class="comparison-prev trend-down">$49.63</span><span class="comparison-delta trend-down">-64.7%</span></div></div></td><td><div class="compare-cell"><b>$0.00</b><div class="compare-sub"><span class="comparison-prev trend-down">$129.98</span><span class="comparison-delta trend-down">-100.0%</span></div></div></td><td><div class="compare-cell"><b>18</b><div class="compare-sub"><span class="comparison-prev trend-down">58</span><span class="comparison-delta trend-down">-69.0%</span></div></div></td><td><div class="compare-cell"><b>0</b><div class="compare-sub"><span class="comparison-prev trend-down">1</span><span class="comparison-delta trend-down">-100.0%</span></div></div></td><td><div class="compare-cell"><b>—</b><div class="compare-sub"><span class="comparison-prev trend-flat">38.2%</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><span class="status amber">需要注意</span><small class="reason">18 次点击、花费 $17.52，仍为 0 单</small></td></tr><tr><td><a href="https://www.amazon.com/dp/B0FVFPMFHG" target="_blank" rel="noopener">B0FVFPMFHG</a><br><small>RBKD-24-WALNUT-ES</small></td><td><div class="compare-cell"><b>$1.03</b><div class="compare-sub"><span class="comparison-prev trend-up">$0.62</span><span class="comparison-delta trend-up">+65.5%</span></div></div></td><td><div class="compare-cell"><b>$8.23</b><div class="compare-sub"><span class="comparison-prev trend-down">$19.89</span><span class="comparison-delta trend-down">-58.6%</span></div></div></td><td><div class="compare-cell"><b>$0.00</b><div class="compare-sub"><span class="comparison-prev trend-flat">$0.00</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>8</b><div class="compare-sub"><span class="comparison-prev trend-down">32</span><span class="comparison-delta trend-down">-75.0%</span></div></div></td><td><div class="compare-cell"><b>0</b><div class="compare-sub"><span class="comparison-prev trend-flat">0</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>—</b><div class="compare-sub"><span class="comparison-prev trend-flat">—</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><span class="status amber">需要注意</span><small class="reason">8 次点击、花费 $8.23，仍为 0 单</small></td></tr><tr><td><a href="https://www.amazon.com/dp/B0FVFRZMDF" target="_blank" rel="noopener">B0FVFRZMDF</a><br><small>RBKD-24-WHITE-BR-2</small></td><td><div class="compare-cell"><b>$1.00</b><div class="compare-sub"><span class="comparison-prev trend-up">$0.91</span><span class="comparison-delta trend-up">+9.8%</span></div></div></td><td><div class="compare-cell"><b>$2.00</b><div class="compare-sub"><span class="comparison-prev trend-down">$46.46</span><span class="comparison-delta trend-down">-95.7%</span></div></div></td><td><div class="compare-cell"><b>$0.00</b><div class="compare-sub"><span class="comparison-prev trend-flat">$0.00</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>2</b><div class="compare-sub"><span class="comparison-prev trend-down">51</span><span class="comparison-delta trend-down">-96.1%</span></div></div></td><td><div class="compare-cell"><b>0</b><div class="compare-sub"><span class="comparison-prev trend-flat">0</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>—</b><div class="compare-sub"><span class="comparison-prev trend-flat">—</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><span class="status amber">需要注意</span><small class="reason">2 次点击、花费 $2.00，仍为 0 单</small></td></tr><tr><td><a href="https://www.amazon.com/dp/B0FVFQNNWX" target="_blank" rel="noopener">B0FVFQNNWX</a><br><small>RBKD-26-WHITE-BR-2</small></td><td><div class="compare-cell"><b>—</b><div class="compare-sub"><span class="comparison-prev trend-flat">$0.95</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>$0.00</b><div class="compare-sub"><span class="comparison-prev trend-down">$11.35</span><span class="comparison-delta trend-down">-100.0%</span></div></div></td><td><div class="compare-cell"><b>$0.00</b><div class="compare-sub"><span class="comparison-prev trend-flat">$0.00</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>0</b><div class="compare-sub"><span class="comparison-prev trend-down">12</span><span class="comparison-delta trend-down">-100.0%</span></div></div></td><td><div class="compare-cell"><b>0</b><div class="compare-sub"><span class="comparison-prev trend-flat">0</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>—</b><div class="compare-sub"><span class="comparison-prev trend-flat">—</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><span class="status amber">待启动</span><small class="reason">本月无广告花费与曝光</small></td></tr><tr><td><a href="https://www.amazon.com/dp/B0FVFR9BFT" target="_blank" rel="noopener">B0FVFR9BFT</a><br><small>RBKD-30-WALNUT-ES-2</small></td><td><div class="compare-cell"><b>—</b><div class="compare-sub"><span class="comparison-prev trend-flat">$0.94</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>$0.00</b><div class="compare-sub"><span class="comparison-prev trend-down">$7.55</span><span class="comparison-delta trend-down">-100.0%</span></div></div></td><td><div class="compare-cell"><b>$0.00</b><div class="compare-sub"><span class="comparison-prev trend-flat">$0.00</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>0</b><div class="compare-sub"><span class="comparison-prev trend-down">8</span><span class="comparison-delta trend-down">-100.0%</span></div></div></td><td><div class="compare-cell"><b>0</b><div class="compare-sub"><span class="comparison-prev trend-flat">0</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>—</b><div class="compare-sub"><span class="comparison-prev trend-flat">—</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><span class="status amber">待启动</span><small class="reason">本月无广告花费与曝光</small></td></tr></tbody></table></div><p class="footnote">本产品按 2026年8月1日–23日 与 2026年7月同期1日–23日 两个从月初开始的同天数周期对比；范围表没有 ASIN 时显示“—”，不使用相关 ASIN 替代。</p></section><footer class="footer">星河 Rafasoda新品产品广告分析｜KD-SOFT-BACK｜2026年8月1日–23日 对比 2026年7月同期1日–23日</footer></main></body></html>

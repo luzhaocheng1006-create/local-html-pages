@@ -1,0 +1,126 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>百华 Tbillionnext新品父体广告分析</title><style>:root {
+  --navy: #102a43;
+  --blue: #1769e0;
+  --cyan: #2f9cf4;
+  --ink: #243b53;
+  --muted: #627d98;
+  --line: #d9e2ec;
+  --bg: #f3f7fb;
+  --good: #14866d;
+  --warn: #b7791f;
+  --bad: #c53f3f;
+  --shadow: 0 14px 34px rgba(16, 42, 67, .10);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+a { color: #1557a8; }
+.page { width: min(1180px, calc(100% - 32px)); margin: 28px auto 48px; }
+.hero { position: relative; overflow: hidden; padding: 38px; border-radius: 24px; color: #fff; background: linear-gradient(135deg, var(--navy), var(--blue) 68%, var(--cyan)); box-shadow: var(--shadow); }
+.hero::after { content: ""; position: absolute; right: -80px; top: -110px; width: 330px; height: 330px; border-radius: 50%; background: rgba(255,255,255,.10); }
+.hero h1 { position: relative; margin: 8px 0 10px; font-size: clamp(30px, 5vw, 52px); line-height: 1.15; }
+.hero p { position: relative; max-width: 900px; margin: 0; color: #e9f5ff; }
+.hero a { color: inherit; }
+.eyebrow { font-size: 12px; font-weight: 900; letter-spacing: .14em; opacity: .85; }
+.back { position: relative; display: inline-block; margin: 0 14px 10px 0; color: #e7f3ff; text-decoration: none; font-weight: 800; }
+.hero-meta { position: relative; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.pill { display: inline-flex; padding: 7px 12px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(255,255,255,.14); font-size: 13px; font-weight: 800; }
+.kpis { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin: 24px 0; }
+.kpi { min-width: 0; padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: #fff; box-shadow: 0 8px 22px rgba(16,42,67,.05); }
+.kpi small, .kpi .label { display: block; color: var(--muted); font-size: 12px; font-weight: 800; }
+.kpi b, .kpi .value { display: block; margin-top: 4px; color: var(--navy); font-size: 25px; font-weight: 900; }
+.kpi .note { color: var(--muted); font-size: 12px; }
+.detail-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.kpi-body { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 8px; }
+.kpi-main { min-width: 0; }
+.kpi-main b { margin: 0; white-space: nowrap; }
+.kpi-prev { margin-top: 10px; font-size: 12px; font-weight: 900; }
+.delta { flex: 0 0 72px; width: 72px; height: 72px; display: grid; place-items: center; border: 3px solid #9db8d3; border-radius: 50%; background: #f7fbff; font-size: 12px; font-weight: 900; }
+.trend-up { color: #b3201d; }
+.trend-down { color: #087551; }
+.trend-flat { color: #4e6f91; }
+.delta.trend-up { border-color: #ef625d; background: #fff2f0; }
+.delta.trend-down { border-color: #22a574; background: #eefaf5; }
+.delta.trend-flat { border-color: #9db8d3; background: #f7fbff; }
+.kpi .note { display: block; margin-top: 8px; }
+.section-title { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin: 34px 0 15px; }
+.section-title small { color: var(--blue); font-weight: 900; letter-spacing: .12em; }
+.section-title h2 { margin: 1px 0; color: var(--navy); }
+.section-title p { max-width: 650px; margin: 0; color: var(--muted); }
+.parents, .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.parent, .product-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: var(--shadow); }
+.parent-top { padding: 22px; color: #fff; background: linear-gradient(135deg, #163b69, #1d74d5); }
+.rank { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; background: #fff; color: var(--blue); font-weight: 900; }
+.parent h3 { margin: 15px 0 2px; font-size: 20px; }
+.asin { font: 700 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.asin a { color: inherit; }
+.parent-body { display: flex; flex: 1; flex-direction: column; padding: 20px; }
+.meta, .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.meta div, .metric { padding: 10px; border-radius: 12px; background: #f5f8fc; }
+.meta span, .metric small { display: block; color: var(--muted); font-size: 11px; }
+.meta strong, .metric b { color: var(--navy); }
+.metrics { margin: 16px 0; }
+.metric { border: 1px solid #e7edf4; background: #fff; }
+.metric b { font-size: 18px; }
+.metric-compare, .compare-sub { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 6px; }
+.comparison-prev { font-size: 11px; font-weight: 900; }
+.comparison-delta { padding: 2px 6px; border: 1px solid currentColor; border-radius: 999px; font-size: 10px; font-weight: 900; line-height: 1.25; }
+.compare-cell > b { display: block; color: var(--navy); white-space: nowrap; }
+.verdict { margin: 0 0 14px; padding-left: 11px; border-left: 3px solid var(--blue); }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 4px 0 18px; }
+.tag { padding: 5px 9px; border-radius: 999px; background: #eaf3ff; color: #1557a8; font-size: 12px; font-weight: 800; }
+.detail { display: block; margin-top: auto; padding: 11px 15px; border-radius: 12px; background: var(--blue); color: #fff; text-align: center; text-decoration: none; font-weight: 800; }
+.section { margin-top: 20px; padding: 22px; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: var(--shadow); }
+.section h2 { margin: 0 0 14px; color: var(--navy); }
+.notice { margin: 18px 0; padding: 14px 17px; border: 1px solid #f0cd77; border-radius: 14px; background: #fff8df; color: #604812; }
+.callout { padding: 15px; border-left: 4px solid var(--blue); border-radius: 10px; background: #edf6ff; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.mini { padding: 14px; border-radius: 13px; background: #f5f8fc; }
+.mini b { display: block; color: var(--navy); }
+.product-card { padding: 18px; box-shadow: none; background: #f8fbff; }
+.product-card h3 { margin: 0 0 4px; color: var(--navy); font-size: 18px; }
+.product-card .metrics { margin: 12px 0; }
+.catalog-asins { display: flex; flex-wrap: wrap; gap: 7px; }
+.catalog-asins a { padding: 5px 8px; border-radius: 8px; background: #edf5ff; font: 700 11px ui-monospace, SFMono-Regular, Menlo, monospace; text-decoration: none; }
+.table-wrap { overflow: auto; border: 1px solid var(--line); border-radius: 14px; }
+table { width: 100%; min-width: 800px; border-collapse: collapse; }
+th { padding: 12px 14px; background: var(--navy); color: #fff; text-align: left; font-size: 12px; }
+td { padding: 13px 14px; border-bottom: 1px solid #e9eff5; vertical-align: top; }
+tbody tr:last-child td { border-bottom: 0; }
+.status { display: inline-block; padding: 4px 9px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+.green { background: #e1f7ef; color: #0e735c; }
+.amber { background: #fff1cc; color: #8b5e00; }
+.red { background: #ffe1e1; color: #a62f2f; }
+.reason { display: block; margin-top: 5px; color: var(--muted); font-size: 11px; line-height: 1.4; max-width: 190px; }
+.empty { padding: 18px; color: var(--muted); text-align: center; }
+.steps { display: grid; gap: 10px; }
+.step { display: grid; grid-template-columns: 36px 1fr; gap: 12px; padding: 13px; border-radius: 13px; background: #f6f9fc; }
+.step i { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: var(--blue); color: #fff; font-style: normal; font-weight: 900; }
+.step b { display: block; color: var(--navy); }
+.footnote { margin-top: 12px; color: var(--muted); font-size: 13px; }
+.footer { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; text-align: center; }
+
+@media (max-width: 1050px) {
+  .kpis { grid-template-columns: repeat(2, 1fr); }
+  .parents, .product-grid { grid-template-columns: 1fr; }
+  .hero { padding: 28px; }
+  .section-title { display: block; }
+  .section-title p { margin-top: 5px; }
+}
+
+@media (max-width: 560px) {
+  .page { width: min(100% - 20px, 1180px); margin-top: 10px; }
+  .kpis { grid-template-columns: 1fr; }
+  .hero { border-radius: 18px; }
+  .meta, .two { grid-template-columns: 1fr; }
+  .delta { flex-basis: 62px; width: 62px; height: 62px; font-size: 11px; }
+}
+
+@media print {
+  body { background: #fff; }
+  .page { width: 100%; margin: 0; }
+  .hero, .parent, .product-card, .section, .kpi { box-shadow: none; }
+  .detail, .back { display: none; }
+  .parents, .product-grid { grid-template-columns: 1fr; }
+}
+</style></head><body><main class="page"><header class="hero"><div class="eyebrow">百华 Tbillionnext · Tbillionnext · 美国</div><h1>新品父体广告分析</h1><div class="hero-meta"><span class="pill">本期：2026年8月1日–23日</span><span class="pill">对比：2026年7月同期1日–23日</span><span class="pill">范围：广告花费大于 0 的新品父体</span><span class="pill">生成于 2026-08-24</span></div></header><section class="kpis"><div class="kpi"><small>综合 CTR</small><div class="kpi-body"><div class="kpi-main"><b>0.7%</b><div class="kpi-prev trend-down">1.9%</div></div><div class="delta trend-down">-60.7%</div></div><span class="note">358 点击 / 47,816 展示</span></div><div class="kpi"><small>广告花费</small><div class="kpi-body"><div class="kpi-main"><b>$419.29</b><div class="kpi-prev trend-down">$512.03</div></div><div class="delta trend-down">-18.1%</div></div></div><div class="kpi"><small>广告销售额</small><div class="kpi-body"><div class="kpi-main"><b>$544.35</b><div class="kpi-prev trend-down">$1,237.49</div></div><div class="delta trend-down">-56.0%</div></div></div><div class="kpi"><small>综合 ACoS</small><div class="kpi-body"><div class="kpi-main"><b>77.0%</b><div class="kpi-prev trend-up">41.4%</div></div><div class="delta trend-up">+86.2%</div></div><span class="note">ROAS 1.30</span></div><div class="kpi"><small>综合 CVR</small><div class="kpi-body"><div class="kpi-main"><b>1.4%</b><div class="kpi-prev trend-down">1.7%</div></div><div class="delta trend-down">-16.8%</div></div><span class="note">5 单 / 358 点击</span></div></section><div class="section-title"><div><small>SPEND-POSITIVE NEW-PRODUCT PARENTS</small><h2>新品父体广告分析报告入口</h2></div></div><section class="parents"><article class="parent"><div class="parent-top"><span class="rank">1</span><h3>KD软包带背</h3><div class="asin"><a href="https://www.amazon.com/dp/B0FVS57HWJ" target="_blank" rel="noopener">B0FVS57HWJ</a> · 销量 5（上月 16，-68.8%）</div></div><div class="parent-body"><div class="meta"><div><span>统计范围</span><strong>广告花费大于 0</strong></div><div><span>新品 ASIN 数</span><strong>24</strong></div></div><div class="metrics"><div class="metric"><small>广告销售额</small><b>$544.35</b><div class="metric-compare"><span class="comparison-prev trend-down">$1,237.49</span><span class="comparison-delta trend-down">-56.0%</span></div></div><div class="metric"><small>广告花费</small><b>$376.79</b><div class="metric-compare"><span class="comparison-prev trend-up">$370.86</span><span class="comparison-delta trend-up">+1.6%</span></div></div><div class="metric"><small>ACoS</small><b>69.2%</b><div class="metric-compare"><span class="comparison-prev trend-up">30.0%</span><span class="comparison-delta trend-up">+131.0%</span></div></div><div class="metric"><small>转化率</small><b>1.6%</b><div class="metric-compare"><span class="comparison-prev trend-down">2.1%</span><span class="comparison-delta trend-down">-24.2%</span></div></div></div><p class="verdict"><strong>一句话结论：</strong>广告 ACoS 69.2%，已获得 5 个广告订单。</p><div class="tags"><span class="tag">本月新品明细 8</span><span class="tag">广告记录明细 3/8</span><span class="tag">广告订单 5 · 上月 12</span></div><a class="detail" href="Baihua_B0FVS57HWJ_2026-08.html">查看详细父体分析 →</a></div></article><article class="parent"><div class="parent-top"><span class="rank">2</span><h3>围椅1832 / 围椅1836</h3><div class="asin"><a href="https://www.amazon.com/dp/B0GCJQ29VF" target="_blank" rel="noopener">B0GCJQ29VF</a> · 销量 0（上月 1，-100.0%）</div></div><div class="parent-body"><div class="meta"><div><span>统计范围</span><strong>广告花费大于 0</strong></div><div><span>新品 ASIN 数</span><strong>12</strong></div></div><div class="metrics"><div class="metric"><small>广告销售额</small><b>$0.00</b><div class="metric-compare"><span class="comparison-prev trend-flat">$0.00</span><span class="comparison-delta trend-flat">—</span></div></div><div class="metric"><small>广告花费</small><b>$42.50</b><div class="metric-compare"><span class="comparison-prev trend-down">$141.17</span><span class="comparison-delta trend-down">-69.9%</span></div></div><div class="metric"><small>ACoS</small><b>—</b><div class="metric-compare"><span class="comparison-prev trend-flat">—</span><span class="comparison-delta trend-flat">—</span></div></div><div class="metric"><small>转化率</small><b>0.0%</b><div class="metric-compare"><span class="comparison-prev trend-flat">0.0%</span><span class="comparison-delta trend-flat">—</span></div></div></div><p class="verdict"><strong>一句话结论：</strong>花费 $42.50、43 次点击但 0 广告订单。</p><div class="tags"><span class="tag">本月新品明细 3</span><span class="tag">广告记录明细 3/3</span><span class="tag">广告订单 0 · 上月 0</span></div><a class="detail" href="Baihua_B0GCJQ29VF_2026-08.html">查看详细父体分析 →</a></div></article></section><section class="section"><h2>父体横向对比</h2><div class="table-wrap"><table><thead><tr><th>销量排序</th><th>父体</th><th>新品 ASIN 数</th><th>销量（本期 / 上期 / 变化）</th><th>花费（本期 / 上期 / 变化）</th><th>广告销售额（本期 / 上期 / 变化）</th><th>ACoS（本期 / 上期 / 变化）</th><th>ROAS（本期 / 上期 / 变化）</th><th>转化率（本期 / 上期 / 变化）</th><th>建议状态与原因</th></tr></thead><tbody><tr><td>#1</td><td><a href="https://www.amazon.com/dp/B0FVS57HWJ" target="_blank" rel="noopener">B0FVS57HWJ</a> · <a href="Baihua_B0FVS57HWJ_2026-08.html">KD软包带背分析</a></td><td>24</td><td><div class="compare-cell"><b>5</b><div class="compare-sub"><span class="comparison-prev trend-down">16</span><span class="comparison-delta trend-down">-68.8%</span></div></div></td><td><div class="compare-cell"><b>$376.79</b><div class="compare-sub"><span class="comparison-prev trend-up">$370.86</span><span class="comparison-delta trend-up">+1.6%</span></div></div></td><td><div class="compare-cell"><b>$544.35</b><div class="compare-sub"><span class="comparison-prev trend-down">$1,237.49</span><span class="comparison-delta trend-down">-56.0%</span></div></div></td><td><div class="compare-cell"><b>69.2%</b><div class="compare-sub"><span class="comparison-prev trend-up">30.0%</span><span class="comparison-delta trend-up">+131.0%</span></div></div></td><td><div class="compare-cell"><b>1.44</b><div class="compare-sub"><span class="comparison-prev trend-down">3.34</span><span class="comparison-delta trend-down">-56.7%</span></div></div></td><td><div class="compare-cell"><b>1.6%</b><div class="compare-sub"><span class="comparison-prev trend-down">2.1%</span><span class="comparison-delta trend-down">-24.2%</span></div></div></td><td><span class="status green">无需修改</span><small class="reason">广告 ACoS 69.2%，已获得 5 个广告订单。</small></td></tr><tr><td>#2</td><td><a href="https://www.amazon.com/dp/B0GCJQ29VF" target="_blank" rel="noopener">B0GCJQ29VF</a> · <a href="Baihua_B0GCJQ29VF_2026-08.html">围椅1832 / 围椅1836分析</a></td><td>12</td><td><div class="compare-cell"><b>0</b><div class="compare-sub"><span class="comparison-prev trend-down">1</span><span class="comparison-delta trend-down">-100.0%</span></div></div></td><td><div class="compare-cell"><b>$42.50</b><div class="compare-sub"><span class="comparison-prev trend-down">$141.17</span><span class="comparison-delta trend-down">-69.9%</span></div></div></td><td><div class="compare-cell"><b>$0.00</b><div class="compare-sub"><span class="comparison-prev trend-flat">$0.00</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>—</b><div class="compare-sub"><span class="comparison-prev trend-flat">—</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>0.00</b><div class="compare-sub"><span class="comparison-prev trend-flat">0.00</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><div class="compare-cell"><b>0.0%</b><div class="compare-sub"><span class="comparison-prev trend-flat">0.0%</span><span class="comparison-delta trend-flat">—</span></div></div></td><td><span class="status red">表现很差</span><small class="reason">花费 $42.50、43 次点击但 0 广告订单。</small></td></tr></tbody></table></div></section><footer class="footer">百华 Tbillionnext新品父体广告分析｜2026年8月1日–23日 对比 2026年7月同期1日–23日｜只读分析</footer></main></body></html>
